@@ -42,4 +42,14 @@ public abstract class Fruta {
 
 	public abstract double pagar();
 
+
+
+
+	@Override
+	public String toString() {
+		return "Fruta [nome=" + nome + ", precoBase=" + precoBase + "]";
+	}
+	
+	
+
 }

@@ -36,6 +36,11 @@ public class FrutaPeso extends Fruta implements IDescontavel{
 	public void setPercentagemDesconto(float percentagemDesconto) {
 		this.percentagemDesconto = percentagemDesconto;
 	}
+
+
+
+	
+	
 	
 	
 	

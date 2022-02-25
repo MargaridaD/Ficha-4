@@ -12,13 +12,15 @@ public class Cesto {
 	//CONSTRUTOR
 	public Cesto() {
 		frutas = new ArrayList<Fruta>(capacidade);
+		totalItens=0;
 	}
 	
 	//MÉTODOS
 	//Um método que insere no cesto diferentes tipos de fruta.
 	public void inserirCesto(Fruta aFruta) {
-		if (frutas.size() <= capacidade){  //É necessário fazer isto, porque quando atingimos a comprimento máximo, continua a ser possível adicionar elemntos ao array, ficando a array com um comprimento maior 
+		if (totalItens < capacidade){  //É necessário fazer isto, porque quando atingimos a comprimento máximo, continua a ser possível adicionar elemntos ao array, ficando a array com um comprimento maior 
 			frutas.add(aFruta);	
+			totalItens++;
 		}else {
 			System.out.println("Não cabem mais itens no cesto!");
 		}

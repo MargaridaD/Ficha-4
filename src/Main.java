@@ -45,7 +45,7 @@ public class Main {
 		int numeroFrutaVolume = cesto1.numeroFrutaPorTipo("FrutaVolume");
 
 		System.out.println("\nValor do cesto: " + valorCestoFormatado +" €"
-				+ "\n* * * Número de frutas de cada tipo dentro do cesto * * * "
+				+ "\n\n* * * Número de frutas de cada tipo dentro do cesto * * * "
 				+ "\nFruta à unidade: " + numeroFrutaUnidade + " unidades,"
 				+ "\nFruta ao peso: " + numeroFrutaPeso + " unidades,"
 				+ "\nFruta a volume: " + numeroFrutaVolume + " unidades"
@@ -61,6 +61,8 @@ public class Main {
 			System.out.println("Nome: " + i.getNome() + " --> Preço: " + valorPagarFormatado +" €");
 		}
 		
+		
+
 		
 	}
 
