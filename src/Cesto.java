@@ -16,7 +16,7 @@ public class Cesto {
 	
 	//MÉTODOS
 	//Um método que insere no cesto diferentes tipos de fruta.
-	public void inserir(Fruta aFruta) {
+	public void inserirCesto(Fruta aFruta) {
 		if (frutas.size() <= capacidade){  //É necessário fazer isto, porque quando atingimos a comprimento máximo, continua a ser possível adicionar elemntos ao array, ficando a array com um comprimento maior 
 			frutas.add(aFruta);	
 		}else {
@@ -25,7 +25,7 @@ public class Cesto {
 		
 	}
 	
-	//Um método que calcula o valor total da fruta no cesto.
+	//c) Um método que calcula o valor total da fruta no cesto.
 	public double valorCesto() {
 		double valorCesto=0;
 		for(Fruta i:frutas) {
@@ -34,30 +34,41 @@ public class Cesto {
 		return valorCesto;
 	}
 	
-	//Um método que determina o número de frutos de um dado tipo existentes no cesto.
-	public double numeroFrutaPorTipo(String aTipo) {
+	//d) Um método que determina o número de frutos de um dado tipo existentes no cesto.
+	public int numeroFrutaPorTipo(String aTipoFruta) {
 		
-		double numeroFruta= 0;			
+		int numeroTipoFruta= 0;			
 		for (Fruta i:frutas) {
-			if(aTipo.equals(i.getClass().getSimpleName())) {
-				numeroFruta++;
+			if(aTipoFruta.equals(i.getClass().getSimpleName())) {
+				numeroTipoFruta++;
 			}
 		}
-		return numeroFruta;
+		return numeroTipoFruta;
 	}
 	
-	//Um método que determina o valor total gasto em frutos de um dado tipo
-	public double valorPorTipo(String aTipo) {
+	//e) Um método que determina o valor total gasto em frutos de um dado tipo
+	public double valorPorTipo(String aTipoFruta) {
 		
-		double valorTipo= 0;			
+		double valorTipoFruta= 0;			
 		for (Fruta i:frutas) {
-			if(aTipo.equals(i.getClass().getSimpleName())) {
-				valorTipo+= i.pagar();
+			if(aTipoFruta.equals(i.getClass().getSimpleName())) {
+				valorTipoFruta+= i.pagar();
 			}
 		}
-		return valorTipo;
+		return valorTipoFruta;
 					
 		}
+
+	
+	//Getters e Setters
+	public List<Fruta> getFrutas() {
+		return frutas;
+	}
+
+	public void setFrutas(List<Fruta> frutas) {
+		this.frutas = frutas;
+	}
+		
 		
 	}
 
